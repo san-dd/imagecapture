@@ -7,11 +7,11 @@ cd imagecapture
 npm install
 
 ### mongodb and Secret JWT_SECRET setup:
-  config/appConfig.js make changes
-  PORT:8080,
-  MONGO_URI:'mongodb://127.0.0.1:27017',
-  MONGO_DB_NAME:'mernloginauth',
-  JWT_SECRET: "sl_myJwtSecret"
+  config/appConfig.js make changes \n
+  PORT:8080,\n
+  MONGO_URI:'mongodb://127.0.0.1:27017',\n
+  MONGO_DB_NAME:'mernloginauth',\n
+  JWT_SECRET: "sl_myJwtSecret"\n
   
  ### Run backend server
   cmd:node app.js
