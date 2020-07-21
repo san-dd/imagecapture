@@ -2,9 +2,9 @@
 
 ## 1.Backend server
 ### install dependencies
-git clone https://github.com/san-dd/imagecapture.git
-cd imagecapture
-npm install
+#### git clone https://github.com/san-dd/imagecapture.git
+#### cd imagecapture
+#### npm install
 
 ### mongodb and Secret JWT_SECRET setup:
   #### config/appConfig.js make changes accordingly
@@ -21,3 +21,14 @@ npm install
  #### 2)localhost:8080/register
  #### 3)localhost:8080/user
  #### 4)localhost:8080/upload
+
+
+## 2.client react app setup
+### install dependencies
+go to client folder 
+cd client
+npm install
+
+  
+ ### Run react app
+  #### cmd:npm start
