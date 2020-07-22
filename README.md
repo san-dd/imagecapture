@@ -25,9 +25,9 @@
 
 ## 2.client react app setup
 ### install dependencies
-go to client folder 
-cd client
-npm install
+#### go to client folder 
+#### cd client
+#### npm install
 
   
  ### Run react app
