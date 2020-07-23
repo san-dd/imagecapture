@@ -3,6 +3,11 @@ import React, { Component } from 'react';
 //ref link https://codesandbox.io/s/react-camera-api-image-capture-jw3gf?file=/src/index.js:571-592
 
 export default class CameraFeed extends Component {
+
+    constructor(props){
+        super(props)
+        this.IntervalId=false
+    }
     /**
      * Processes available devices and identifies one by the label
      * @memberof CameraFeed
@@ -37,7 +42,12 @@ export default class CameraFeed extends Component {
         const cameras = await navigator.mediaDevices.enumerateDevices();
         this.processDevices(cameras);
     }
-
+    /*
+        on unmount stop intervar
+    */
+    async componentWillUnmount() {
+        clearInterval(this.IntervalId);
+    }
     /**
      * Handles taking a still image from the video feed on the camera
      * @memberof CameraFeed
@@ -51,7 +61,7 @@ export default class CameraFeed extends Component {
             context.drawImage(this.videoPlayer, 0, 0, 680, 360);
             this.canvas.toBlob(sendFile);
 
-            setInterval(() => {
+         this.IntervalId= setInterval(() => {
             const { sendFile } = this.props;
             const context = this.canvas.getContext('2d');
             context.drawImage(this.videoPlayer, 0, 0, 680, 360);
